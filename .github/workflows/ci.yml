@@ -31,4 +31,5 @@ jobs: # A workflow is made up of one or more jobs
       - run: flake8 tests/ --max-line-length=88 # Run flake8 on src/ and tests/; allow lines up to 88 chars
 
       # Step 6: Run the automated test suite to verify the code works correctly
+      - run: pip install pytest
       - run: pytest tests/ -v --tb=short # Run pytest with verbose output (-v) and short error tracebacks (--tb=short)
